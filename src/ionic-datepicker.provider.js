@@ -100,7 +100,7 @@ angular.module('ionic-datepicker.provider', [])
 
       //Set date for the modal
       $scope.setIonicDatePickerDate = function () {
-        $scope.mainObj.callback($scope.selctedDateEpoch);
+        $scope.mainObj.callback(-1);
         closeModal();
       };
 
@@ -228,6 +228,7 @@ angular.module('ionic-datepicker.provider', [])
       }
 
       $scope.closeIonicDatePickerModal = function () {
+        $scope.mainObj.callback($scope.selctedDateEpoch);
         closeModal();
       };
 
